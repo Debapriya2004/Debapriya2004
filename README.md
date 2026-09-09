@@ -39,7 +39,6 @@
 <img src="https://komarev.com/ghpvc/?username=debapriya-das&label=Profile%20Views&color=00d4ff&style=for-the-badge"/>
 
 </p>
-> ⚠️ **Note:** Replace `debapriya-das` in every badge/stats URL below with your **exact GitHub username**, and swap in your real LinkedIn and email — otherwise the widgets won't load correctly.
 
 ---
 
