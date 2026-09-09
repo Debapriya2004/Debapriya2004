@@ -44,8 +44,6 @@
 
 </p>
 
-> ⚠️ **Note:** LinkedIn URL, email, and the Buy Me a Coffee link are still placeholders — swap those for your real ones. GitHub stats/badges below are wired to your real username `Debapriya2004`, so they'll load correctly once this file sits in a repo named exactly `Debapriya2004/Debapriya2004` (a "profile README" repo — see setup steps at the bottom).
-
 ---
 
 # 👨‍💻 About Me
@@ -189,8 +187,6 @@ width="95%"
 <img src="https://raw.githubusercontent.com/Debapriya2004/Debapriya2004/output/github-contribution-grid-snake-dark.svg" width="95%"/>
 </p>
 
-> ⚙️ **Setup required** — this only appears after you add the `snk` GitHub Action to your profile repo. Full workflow file is at the bottom of this doc under **"Extra Setup: GitHub Actions"**.
-
 ---
 
 # 🎮 Skill Metrics (Animated)
@@ -199,8 +195,6 @@ width="95%"
 <img src="https://metrics.lecoq.io/Debapriya2004?template=classic&base.header=0&base.activity=0&languages=1&languages.limit=8&languages.threshold=0&isocalendar=1&isocalendar.duration=full-year" width="95%"/>
 </p>
 
-> 💡 Generated via the [metrics](https://github.com/lowlighter/metrics) GitHub Action — connect your own repo to auto-refresh this on a schedule.
-
 ---
 
 # ⏱️ WakaTime — Weekly Coding Activity
@@ -208,8 +202,6 @@ width="95%"
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api/wakatime?username=Debapriya2004&theme=tokyonight&hide_border=true&layout=compact" width="60%"/>
 </p>
-
-> 🔌 Requires a free [WakaTime](https://wakatime.com/) account linked to your editor, plus your WakaTime username set in the URL above.
 
 ---
 
@@ -229,8 +221,6 @@ width="95%"
 # 📌 Featured Projects
 
 <p align="center">
-
-<!-- Replace REPOSITORY-1, REPOSITORY-2, etc. with your EXACT repository names -->
 
 <a href="https://github.com/Debapriya2004/REPOSITORY-1">
 <img
@@ -275,8 +265,6 @@ width="48%"
 <img src="https://api.star-history.com/svg?repos=Debapriya2004/REPOSITORY-1&type=Date" width="80%"/>
 </a>
 </p>
-
-> 📈 Replace `REPOSITORY-1` with your flagship repo to track its star growth over time.
 
 ---
 
@@ -397,47 +385,3 @@ width="48%"
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:2c5364,100:0f2027&height=150&section=footer" width="100%"/>
 
 </div>
-
----
-
-## 🧩 Extra Setup: GitHub Actions
-
-Some widgets above (the **snake animation** and **animated metrics**) don't work from a static badge URL alone — they need a small workflow file running in your profile repo (`Debapriya2004/Debapriya2004`) to generate and refresh the image on a schedule. Steps:
-
-1. In your profile repo, create the folder `.github/workflows/`.
-2. Add a file called `snake.yml` inside it with this content:
-
-```yaml
-name: Generate Snake Animation
-on:
-  schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        id: snake-gif
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake.svg
-
-      - uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
-3. Commit it, then go to the **Actions** tab of your repo and manually run it once ("Run workflow") so the `output` branch gets created immediately instead of waiting for the schedule.
-4. For the **animated metrics** section, follow the setup guide in the [lowlighter/metrics](https://github.com/lowlighter/metrics#-getting-started) repo — it's a similar workflow-file pattern.
-
-Once these are live, the placeholder icons for those two sections will turn into real animated graphics.
